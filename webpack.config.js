@@ -1,5 +1,3 @@
-// & https://tproger.ru/translations/webpack-basics/
-
 const path = require('path')
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -10,16 +8,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 DEV_ROOT = "./src"
 DIST_ROOT = "./dist"
 
-STYLE_PATH = "scss"
-JS_PATH = "js"
-
 module.exports = {
 
     // настройки окружения
     entry: path.resolve(DEV_ROOT, "index.js"),
     output: {
         path: path.resolve(__dirname, DIST_ROOT),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
     },
     optimization: {
         minimize: false
@@ -51,6 +46,20 @@ module.exports = {
                 test: /\.scss$/i,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]'
+                }
+            },
+            {
+                test: /\.ttf$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext]'
+                }
+            }
         ],
     },
 

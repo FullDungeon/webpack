@@ -1,0 +1,21 @@
+/*
+    Шрифты экспортируются в готовую сборку автоматически.
+*/
+
+@font-face {
+    font-family: 'Custom Montserrat';
+    src: url(../assets/fonts/Montserrat-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Custom Montserrat';
+    src: url(../assets/fonts/Montserrat-Regular.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Custom Montserrat';
+    src: url(../assets/fonts/Montserrat-Bold.ttf);
+    font-weight: 800;
+}
