@@ -17,7 +17,7 @@
     }
 }
 
-.add {
+.add-btn {
     margin-top: 10px;
     padding: 10px;
 
@@ -27,11 +27,21 @@
     /*
         Пример использования изображения в SCSS
 
-        Его не нужно испортировать в файле index.js.
+        Его не нужно импортировать в файле index.js.
         Здесь указывается путь к файлу относительнго base.scss
         Webpack сам поменяет этот путь на нужный.
+
+        Тут нужно указать путь к изображению относительно файла base.scss. 
     */
     content: url(../assets/images/add.svg);
     background-color: $accent;
     border-radius: 5px;
+}
+
+.link-btn {
+    margin-top: 10px;
+    display: block;
+
+    text-decoration: none;
+    color: #000;
 }
