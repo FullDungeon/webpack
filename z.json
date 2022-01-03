@@ -1,0 +1,9 @@
+{
+    "name": "Webpack",
+    "type": "Template",
+    "state": "active",
+    "description": "Шаблон приложения с использованием Webpack",
+    "tags": [
+        "Webpack", "HTML+SCSS+JS"
+    ]
+}

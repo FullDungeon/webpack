@@ -40,24 +40,28 @@ module.exports = {
             minify: false
         }),
         /* ---- для многостраничного сайта
-           Здесь можно указать различные файлы HTML, добавляю новые вызовы HtmlWebpackPlugin
+           Здесь можно указать различные файлы HTML, добавляя новые вызовы HtmlWebpackPlugin
            с соответствующим названием файла и пути к нему.
 
            Для всех страниц генерируется один файл JavaScript и один файл со стилями CSS.
         */
         new HtmlWebpackPlugin({
             filename: 'second.html',
-            template: __dirname + "/src/second.html",
+            template: __dirname + "/src/pages/second.html",
             inject: 'body',
             minify: false
-        })
+        }),
         // ----;
     ],
     module: {
         rules: [
             {
                 test: /\.scss$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,

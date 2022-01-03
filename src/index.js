@@ -1,17 +1,12 @@
-// js
-import './js/input.js';
+// ---- js
+import './js/main.js';
 
-// scss
+// ---- scss
 import './style/base.scss';
 
-// images
+// ---- images
 /*
 Здесь нужно импортировать изображения, которые используются в HTML (в атрибуте src)
 Изображения, добавляемые с помощью 'url' в SCSS автоматически добавляются в каталог dist/images
 */
 import logoImage from './assets/images/logo.svg'
-
-/*
-import './assets/fonts/Montserrat-Bold.ttf';
-import './assets/fonts/Montserrat-Light.ttf';
-import './assets/fonts/Montserrat-Regular.ttf';*/
