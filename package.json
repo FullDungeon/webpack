@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development",
-    "start": "npm run build && npm run dev"
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --config webpack.dev.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,8 +21,10 @@
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.61.0",
+    "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.1",
     "webpack-dashboard": "^3.3.6",
-    "webpack-dev-server": "^4.4.0"
+    "webpack-dev-server": "^4.4.0",
+    "webpack-merge": "^5.8.0"
   }
 }
